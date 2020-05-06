@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+body{
+	font-family: 'Comfortaa', cursive !important; 
+
+	padding: 0;
+	margin: 0;
+}
+
+.navbar_{
+	color: white;
+	height: 80px;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	background-color: black;
+
+}
+
+.navbar_ div{
+	height: 80px;
+	padding: 0 40px;
+	border-right: 1px solid #dee5eb;
+  transition: 500ms ease;
+}
+
+.navbar_ div:first-child{
+	border-left: 1px solid #dee5eb;
+}
+
+.navbar_ div p{
+	margin-top: 30px;
+  transition: 500ms ease;
+  font-size: 20px
+
+}
+
+
+.navbar_ div:hover{
+  box-shadow: 0px 0px 20px white;
+  cursor: pointer;
+}
+
+.navbar_ div:hover p{
+  transform: scale(1.2);
+}
+.main{
+	width: 1000px;
+	margin: auto;
+	margin-top: 50px;
+	text-align: center;
+	margin-bottom: 50px;
+
+}
+.main .title{
+	margin: 0;
+	font-size: 36px;
+}
+
+.main .org_name{
+	margin-top: 20px;
+ 	display:inline-block;
+	background-color: black;
+	color: white;
+	padding: 10px 20px;
+}
+.about{
+	width: 1200px;
+	margin: auto;
+
+}
+
+.column {
+  float: left;
+  width: 30%;
+  padding: 10px;
+	margin-bottom: 50px;
+  border-right: 2px solid black;
+	text-align: center;
+
+}
+
+.column:last-child{
+	border-right: none;
+}
+
+.column h2{
+}
+
+.column p{
+	text-align: justify;
+	padding: 20px;
+	height: 200px;
+	overflow: scroll;
+}
+
+.column i{
+	font-size: 50px;
+	display: block;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.column h6{
+	font-size: 15px;
+	font-weight: 900;
+	margin-top: 30px;
+}
+
+.button{
+	display: block;
+	width: 300px;
+	height: 60px;
+	margin-top: 50px;
+	margin: auto;
+	padding: 15px 40px;
+	border: none;
+	background-size: 300% 100%;
+	color: white;
+	font-family: 'Comfortaa';
+	font-size: 20px;
+}
+.button:hover{
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+
+}
+
+
+.title2{
+	text-align: center;
+	margin-top: 100px;
+}
+
+@media screen and (max-width: 1200px) {
+	.about{
+	width: 100%;
+}
+}
+
+@media screen and (max-width: 900px) {
+	.about{
+	width: 100%;
+}
+  .column {
+     width: 100%;
+     border: none;
+  }
+  .column p{
+  	width: 80%;
+  	margin-left: 5vw;
+  }
+  .title{
+  	font-size: 2em;
+  }
+  .main{
+  	width: 600px;
+  }
+}
+@media screen and (max-width: 600px) {
+
+    .title{
+  	font-size: 1.5em;
+  }
+  .main{
+  	width: 400px;
+  }
+}
+
+
+
+
+
+
+.skill1{   background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);}
+    
+.skill2{ background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);}
+    
+.skill3{ background: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);}
+
+.skill4{background: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #e75516);}
+
+.skill5{ background: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673);}
+    
+.skill6{background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);}
+
+.skill7{background: linear-gradient(90deg, rgba(99,58,180,1) 12%, rgba(170,93,93,1) 50%, rgba(176,253,29,1) 99%);}
+
+.skill8{ background: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);}
+    
+.skill9{background: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a , #FBB03B);}
+
+
+
+
+
+
+
+
+
+.jobs{
+  justify-content: space-around;
+  font-family: arial;
+  width: 100%;
+  padding-left: 100px;
+}
+
+.description-block {
+    border-top: 1px solid #dee5eb;
+    min-height: 70px;
+    overflow: hidden;
+    width: 100%;
+    font-size: 0;
+    position: absolute;
+    bottom: 0;
+    right:0
+
+}
+.description-block .time{
+    font-size: .6125rem;
+    border-right: 1px solid #dee5eb;
+    /*border-bottom: 1px solid #dee5eb;*/
+    text-align: center;
+    color: rgba(85, 104, 115, .72);
+    text-transform: uppercase;
+    line-height: .5625rem;
+    font-weight: 700;
+    float: left;
+    padding: 0 5px;
+    width: 25%;
+    height:100px
+}
+.description-block .time .hours {
+    padding-top: 12px;
+    display: block;
+    margin-bottom: 6px;
+    text-align: center;
+    color: #002f49;
+    font-weight: 700;
+    font-size: 1.1375rem;
+    line-height:.875rem
+}
+
+.description-block .skills, .description-block .places {
+    font-size: .65625rem;
+    width: 75%;
+    float: right;
+    position: relative;
+    background: 0 0;
+    border-bottom: 1px solid #dee5eb;
+    color: #71787d;
+    padding: 5px 35px 5px 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .525px;
+    line-height: .6875rem;
+    min-height:35px;
+    padding-bottom:15px;
+}
+div .card_ {
+  margin: 20px;
+  width: 350px;
+  height: 370px;
+  border-radius: 3px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: 0.4s 0.15s cubic-bezier(0.17, 0.67, 0.5, 1.03);
+  display: inline-block;
+}
+div .card_ .thumb {
+  width: auto;
+  height: 50px;
+  border-radius: 3px;
+  background-size: 300% 100%;
+
+
+}
+div .card_ .thumb i{
+	font-size: 30px;
+	color: white;
+	padding: 10px;
+	padding-right: 0;
+}
+div .card_ .thumb span{
+	color: white;
+	padding: 10px
+}
+
+div .card_ .infos {
+  width: auto;
+  height: 350px;
+  position: relative;
+  padding: 14px 24px;
+ background: #fff;
+}
+div .card_ .infos .title {
+  height: 150px;
+  position: relative;
+  margin: 10px 0;
+  color: #152536;
+  font-size: 1.2rem;
+  text-shadow: 0 0 0px #32577f;
+  overflow: scroll;
+}
+
+
+div .card_ .infos .date, div .card_ .infos .company {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: .85rem;
+  color: rgba(21, 37, 54, 0.7);
+}
+div .card_ .infos .company {
+  display: inline-block;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+div .card_:hover {
+  transform: scale(1.05);
+}
+
+.card_:hover{
+   cursor: pointer;
+}
+.card_:hover .thumb{
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.flex{
+		display: block;
+	}
+} 
+
+
