@@ -2,9 +2,7 @@
    session_start();
    $connect = mysqli_connect("127.0.0.1", "root", "Starkova24", "vhelp"); 
    
-   
    $orgs_id = $_SESSION['id'];
-   
    
    $query = mysqli_query($connect, "SELECT * from gigs WHERE orgs_id='{$orgs_id}' ");
    
@@ -120,6 +118,7 @@
             <div class="uk-container opportunities">
                <ul class="uk-subnav uk-subnav-pill" uk-switcher>
                   <li><a href="#">Сейчас в прогрессе</a></li>
+                  <li><a href="#">Пустые</a></li>
                   <li><a href="#">Новые заявки</a></li>
                   <li><a href="#">Законченные работы</a></li>
                </ul>
@@ -168,6 +167,48 @@
                                  </div>
                                  <div class="skills">Удаленная работа: <?php echo $row['remote_work'] ?></div>
                                  <div class="places">мест осталось: <?php echo $row['seats'] ?></div>
+                              </div>
+                           </div>
+                        </div>
+                        <?php } ?>
+                     </div>
+                  </li>
+                  <li>
+                     <div class="jobs ">
+                        <?php 
+                           $gigs_empty = mysqli_query($connect, "
+                            SELECT * from gigs 
+                           
+                            NATURAL LEFT JOIN in_action WHERE in_action.gigs_id IS NULL
+                           
+                            AND gigs.orgs_id = '{$orgs_id}'
+                           
+                             ")or die(mysqli_error($connect));
+                           
+                           while ($gigs_empty_fetch = $gigs_empty->fetch_assoc()) {
+                           
+                           ?>
+                        <div class="card_ " id="<?php echo $gigs_empty_fetch['skill_id']?>">
+                           <div class="thumb <?php echo $gigs_empty_fetch['skill_id'] ?>">
+                              <i class="fas <?php echo $gigs_empty_fetch['skill_icon'] ?>"></i> 
+                              <span><?php echo $gigs_empty_fetch['skill_name'] ?></span>
+                              <form method="post" action="delete.php">
+                                 <input style="display: none" name="gigs_id" value="<?php echo $gigs_empty_fetch['id']?>">
+                                 <input style="display: none" name="empty_gig" value="empty_gig">
+                                 
+                                 <button class="decision decline end" type="submit">Удалить</button>
+                              </form>
+                           </div>
+                           <div class="infos">
+                              <h2 class="title"><?php echo $gigs_empty_fetch['title'] ?></h2>
+                              <h3 class="company"></h3>
+                              <div class="description-block">
+                                 <div class="time">
+                                    <span class="hours"><?php echo $gigs_empty_fetch['hours'] ?></span>
+                                    <span>часов в неделю</span>
+                                 </div>
+                                 <div class="skills">Удаленная работа: <?php echo $gigs_empty_fetch['remote_work'] ?></div>
+                                 <div class="places">мест осталось: <?php echo $gigs_empty_fetch['seats'] ?></div>
                               </div>
                            </div>
                         </div>
