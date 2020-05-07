@@ -121,7 +121,7 @@
             </div>
             <?php } ?>
          </div>
-          <a href="../"><button class="button skill3">Назад</button></a>
+          <a href=user/index.php"><button class="button skill3">Назад</button></a>
       </div>
 </body>
 </html>
