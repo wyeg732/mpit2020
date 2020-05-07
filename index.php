@@ -133,7 +133,7 @@
                <p><?php if (isset($_SESSION['id'])) {
                  echo '<a href="session_kill.php">выйти</a>';
                }else{
-                  echo '<a href="#join.php">начать</a>';
+                  echo '<a href="#join">начать</a>';
                } ?></p>
             </div>
          </div>
