@@ -14,6 +14,9 @@
       <link rel="stylesheet" type="text/css" href="fonts/css/all.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
       <style type="text/css">
+          html{
+            background-color: black;
+         }
          .action{
          background-color: black;
          padding: 50px 0;
@@ -81,6 +84,18 @@
          .fake_button:hover{
          color: #03b1fc;
          }
+
+         @media only screen and (max-width: 1100px) {
+         .actions_container{
+            display: block;
+            width: 600px;
+            margin: auto;
+         }
+         .action_item{
+            margin-bottom: 50px;
+         }
+         }
+         
       </style>
    </head>
    <body>
@@ -115,7 +130,11 @@
                <p><a href="#jobs">работы</a></p>
             </div>
             <div>
-               <p><a href="#join">начать</a></p>
+               <p><?php if (isset($_SESSION['id'])) {
+                 echo '<a href="session_kill.php">выйти</a>';
+               }else{
+                  echo '<a href="#join.php">начать</a>';
+               } ?></p>
             </div>
          </div>
       </div>
