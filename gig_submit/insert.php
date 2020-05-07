@@ -52,7 +52,7 @@ $query = mysqli_query($connect,
   "INSERT INTO gigs
   (orgs_id, title, todo, motivation, reqs, skill_name, skill_icon, skill_id, hours, seats, remote_work) 
 
-  VALUES ('" $_SESSION["id"] "', 
+  VALUES ('" . $_SESSION["id"] . "', 
       '" . $_POST['title'] . "', 
       '" . $_POST['todo'] . "', 
       '" . $_POST['motivation'] . "', 
